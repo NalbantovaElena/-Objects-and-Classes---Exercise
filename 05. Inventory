@@ -1,0 +1,25 @@
+function solve(input) {
+    let arr = []
+    input.forEach(element => {
+        let obj = {}
+        let [name, level, items] = element.split(' / ');
+        level = Number(level)
+
+
+        obj = {
+            name,
+            level,
+            items
+        }
+        arr.push(obj)
+    });
+    let sortName = arr.sort((a, b) => (a.level - b.level))
+    //console.log(sortName)
+    sortName.forEach(element => {
+        console.log(`Hero: ${element.name}`)
+        console.log(`level => ${element.level}`)
+        console.log(`items => ${element.items.split(', ').sort((a, b) => a.localeCompare(b)).join(', ')}`)
+
+    })
+    
+}
