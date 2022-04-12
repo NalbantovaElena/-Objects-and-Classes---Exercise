@@ -1,0 +1,12 @@
+function solve(input) {
+
+    input.forEach(element => {
+        let obj = {
+            name: element,
+            personalNumber: element.length
+        }
+        console.log(`Name: ${obj.name} -- Personal Number: ${obj.personalNumber}`)
+    });
+
+    
+}
