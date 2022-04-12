@@ -1,0 +1,16 @@
+function solve(input) {
+    //Town", "Latitude" and "Longitude
+    input.forEach(element => {
+        [town, latitude, longitude] = element.split(' | ')
+
+        latitude = Number(latitude).toFixed(2)
+        longitude = Number(longitude).toFixed(2)
+        let obj = {
+            town,
+            latitude,
+            longitude
+        }
+        console.log(obj)
+    });
+
+}
