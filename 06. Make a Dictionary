@@ -1,0 +1,18 @@
+function solve(input) {
+
+    let objResult = {}
+    input.forEach(element => {
+        let obj = JSON.parse(element)
+        objResult = Object.assign(objResult, obj)
+    });
+    //console.log(objResult)
+    let sortedKeys = Object.keys(objResult);
+    //console.log(sortedKeys)
+    sortedKeys.sort((a, b) => a.localeCompare(b));   
+     
+    for (let term of sortedKeys) {
+        let definition = objResult[term];             
+        console.log(`Term: ${term} => Definition: ${definition}`);
+    }
+   
+}
